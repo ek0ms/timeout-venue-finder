@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.App .user-list {
+  width: 50%;
+}
+
+.App .venue-list {
+  width: 50%;
+}
+
+.App .title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.App .venue {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.App ul {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  padding: 0;
+}
+
+.drink-reasons li {
+  list-style: inside;
+}
+
+.eat-reasons li {
+  list-style: inside;
+}
