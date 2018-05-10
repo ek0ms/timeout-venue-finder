@@ -27,10 +27,6 @@ class App extends Component {
     this.setState({ users, venues });
   }
 
-  componentDidUpdate() {
-    console.log(this.state.selectedUsers);
-  }
-
   toggleCheckbox = (user) => {
     let selectedUsers;
 
@@ -44,8 +40,6 @@ class App extends Component {
     }
 
     this.venueFinder(this.state.venues, selectedUsers);
-
-    this.setState({ selectedUsers });
   };
 
   venueFinder(venues, selectedUsers) {
@@ -73,7 +67,7 @@ class App extends Component {
       }
     }
 
-    this.setState({ goodVenues, badVenues });
+    this.setState({ goodVenues, badVenues, selectedUsers });
   }
 
   render() {
@@ -81,7 +75,6 @@ class App extends Component {
       <div className="App">
         <UserList users={this.state.users} toggleCheckbox={this.toggleCheckbox} />
         <VenueList
-          selectedUsers={this.state.selecteddUsers}
           venues={this.state.venues}
           goodVenues={this.state.goodVenues}
           badVenues={this.state.badVenues}

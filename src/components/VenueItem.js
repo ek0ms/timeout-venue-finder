@@ -1,14 +1,7 @@
+/* eslint consistent-return: 0 */
 import React from 'react';
 
 const VenueItem = (props) => {
-  return (
-    <li className="venue-item">
-      <div className="venue">{props.name}</div>
-      {renderEatReasons()}
-      {renderDrinkReasons()}
-    </li>
-  );
-
   function renderEatReasons() {
     if (props.usersWhoCantEat) {
       return (
@@ -30,6 +23,14 @@ const VenueItem = (props) => {
       );
     }
   }
+
+  return (
+    <li className="venue-item">
+      <div className="venue">{props.name}</div>
+      {renderEatReasons()}
+      {renderDrinkReasons()}
+    </li>
+  );
 };
 
 export default VenueItem;
